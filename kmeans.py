@@ -64,7 +64,7 @@ if __name__ == '__main__':
             items.append([float(item) for item in line.split()])
 
     # create the clusters multiple times to compare
-    for i in range(10):
+    for i in range(1):
         results = find_clusters(items, 6)
         print(
             'sorted cluster sizes:',
