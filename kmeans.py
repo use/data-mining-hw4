@@ -48,6 +48,8 @@ def find_clusters(items: List[List[float]], k: int):
             new_clusters[selected_index].append(item)
 
         if new_clusters == old_clusters:
+            for index, cluster in enumerate(new_clusters):
+                cluster.insert(centroids[index])
             return ClusterResults(
                 clusters = new_clusters,
                 iterations = iterations,
