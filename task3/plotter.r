@@ -13,6 +13,7 @@ for (i in c(1:6)) {
     file = paste("cluster", i, ".csv", sep=""),
     x = signals[signals["cluster"] == i,][1:60],
     row.names = FALSE,
-    col.names = FALSE)
+    col.names = FALSE
+  )
   lines(fit$centers[i,], col='red')
 }
